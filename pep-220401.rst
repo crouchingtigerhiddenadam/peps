@@ -14,7 +14,7 @@ Dating back to February of 2001, python has had the capacity to import
 from the ``__future__``. Today we are announcing that the 
 ``to __past__ export past_statement`` companion syntax is now complete, 
 allowing us to send the present and future syntax and semantic back to 
-past programs. 
+past programs.  
 
 
 Motivation
