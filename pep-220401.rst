@@ -1,6 +1,6 @@
 PEP: 220401
 Title: Back to the Past
-Authors: Temporally Ambiguous <TemporallyAmbiguous at pythondiscord.com>
+Author: Temporally Ambiguous
 Status: April Fool!
 Type: Standards Track
 Content-Type: text/x-rst
