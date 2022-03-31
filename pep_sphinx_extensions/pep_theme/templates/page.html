@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="color-scheme" content="light dark" />
-    <title>{{ title + " | peps.python.org"|safe }}</title>
+    <title>{{ title + " | peps.pythondiscord.com"|safe }}</title>
     <link rel="shortcut icon" href="{{ pathto('_static/py.png', resource=True) }}"/>
     <link rel="canonical" href="{{ pageurl|escape }}" />
     <link rel="stylesheet" href="{{ pathto('_static/style.css', resource=True) }}" type="text/css" />
@@ -36,7 +36,7 @@
             {{ toc }}
             <br />
             {%- if not sourcename.startswith("pep-0000") %}
-            <a id="source" href="https://github.com/python/peps/blob/main/{{sourcename}}">Page Source (GitHub)</a>
+            <a id="source" href="https://github.com/python-discord/peps/blob/main/{{sourcename}}">Page Source (GitHub)</a>
             <br />
             <img src="{{ pathto('_static/ducky.png', resource=True) }}" width="15px">
             {%- endif %}
