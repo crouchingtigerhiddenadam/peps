@@ -54,7 +54,7 @@ class PEPFooter(transforms.Transform):
 
 def _add_source_link(pep_source_path: Path) -> nodes.paragraph:
     """Add link to source text on VCS (GitHub)"""
-    source_link = f"https://github.com/python/peps/blob/main/{pep_source_path.name}"
+    source_link = f"https://github.com/python-discord/peps/blob/main/{pep_source_path.name}"
     link_node = nodes.reference("", source_link, refuri=source_link)
     return nodes.paragraph("", "Source: ", link_node)
 
@@ -67,7 +67,7 @@ def _add_commit_history_info(pep_source_path: Path) -> nodes.paragraph:
         return nodes.paragraph()
 
     iso_time = datetime.datetime.utcfromtimestamp(since_epoch).isoformat(sep=" ")
-    commit_link = f"https://github.com/python/peps/commits/main/{pep_source_path.name}"
+    commit_link = f"https://github.com/python-discord/peps/commits/main/{pep_source_path.name}"
     link_node = nodes.reference("", f"{iso_time} GMT", refuri=commit_link)
     return nodes.paragraph("", "Last modified: ", link_node)
 
