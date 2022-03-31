@@ -1,0 +1,214 @@
+PEP: 2241
+Title: Back to the Past
+Author: Temporally Ambiguous
+Status: April Fool!
+Type: Standards Track
+Content-Type: text/x-rst
+Created: 01-Apr-2022
+
+
+Abstract
+========
+
+Dating back to February of 2001, python has had the capacity to import 
+from the ``__future__``. Today we are announcing that the 
+``to __past__ export past_statement`` companion syntax is now complete, 
+allowing us to send the present and future syntax and semantic back to 
+past programs.  
+
+
+Motivation
+==========
+
+There is no free lunch, and for every 
+``from **__future__** import future_statement``, there must be a 
+corresponding execution to export syntax or semantics back into the past.
+
+
+Intent
+======
+
+To allow the adoption of future syntax and semantics which are for a 
+time incompatible with the current python version, it is possible to 
+import them using a future_statement. Consequentially, there must be 
+another program executed at an undetermined time in the future which 
+removes that future_statement from the program, allowing the past 
+program to import and use the future_statement. 
+
+When a future_statement was needed some time in the past, a 
+past_statement will be used to remove the syntax or semantics from 
+code it is executing within.
+
+
+Implementation
+==============
+
+the ``__past__`` and ``__future__`` syntax communicate in a transmitter-receiver
+design which does necessitate some hardware, as outlined below.
+
+Hardware
+--------
+
+Using the delta configuration of Emmett Brown’s technology we can transmit 
+to the classical Wye configuration using a temporally focused delta-wye 
+transformer. This is similar in principle to the turboencabulator, but 
+here we must omit the lunar wave shaft for better signal integrity. The 
+omission does come at the cost of the malleability in the logarithmic 
+casing, but by offsetting the two halves of the transformer both 
+temporally and physically, we maintain it’s logarithmic design, albeit 
+significantly more rigid.
+
+Python core maintainers have preserved the wye configuration receiver 
+which allows for the ``__future__`` syntax to function in the codebase.
+
+Communication Protocol
+----------------------
+
+Reverse temporally focused bits, “Ni’s”, are structured into packets and 
+transmitted to the wye receiver. To ensure successful packet negotiation, 
+the communication protocol is 1001 tense formation compliant through 
+“Future Semiconditionally Modified Subinverted Plagal Past Subjunctive 
+Intentional”. While this does fall short of the full 1001 tense formation, 
+the grammar is thorough enough to ensure reliable transmission assuming 
+the delta transmitter is properly configured.
+
+In the event that it is accidentally configured as a Nutrimatic Drink 
+Dispenser, it will throw an error code almost, but not quite, entirely 
+unlike 418. This raises a ``NutrimaticTeaError`` which is blocking on infinite 
+improbability drive architectures.
+
+The Wye receiver decodes and retransmits the packet to the corresponding 
+``from __future__  import future_statement`` call.
+
+
+Syntax 
+======
+
+A past_statement is simply a to/export statement using the reserved 
+module name ``__past__``::
+
+    past_statement: "to" "__past__" "export" feature ["as" name]
+                    (","feature ["as" name])*
+
+    feature: identifier
+    name: identifier
+
+In addition, all past_statements must appear at the top of the module. 
+The only lines that can appear before a past_statement are:
+
++ the module docstring (if any).
++ Comments.
++ Blank lines.
++ Other past_statements
++ Any future_statements (this is discouraged)
+
+Example::
+
+    """This is a module docstring"""
+
+    # This is a comment, preceded by a blank line and followed by
+    # a past_statement
+
+    to __past__ export print
+
+    from math import sin
+    to __past__ export winning_philosophy_football_teams
+    # Compile-time error!
+    # That was an error because we cannot export profitable 
+    # knowledge back to the past
+
+Semantics 
+=========
+
+A past_statement is recognized and treated specially at compile time: 
+changes to the semantics of the core constructs are often implemented 
+by generating different code with the past_statement removed. 
+
+The direct runtime semantics are the reverse of any ``import`` statement: 
+after the past_statement is invoked, it is treated as if there is no 
+standard module containing it. Any further invocation to the 
+past_statement will raise a SyntaxError.
+
+
+Example
+=======
+
+Consider this code::
+
+    x = 42
+    print("x is", x)
+
+In recent versions of python, it prints ``42`` successfully. However if 
+this is run using python 2.6, you’d need to run::
+
+    from __future__ import print_function
+    x = 42
+    print("x is", x)
+
+Before the print As a Function can be executed. 
+
+To sustain this usage, there must be a companion export::
+
+    to __past__ export print_function
+    x = 42
+
+If the print function is called after it has been executed, the program will 
+raise a NameError::
+
+    to __past__ export print_function
+    x = 42
+    print(x)
+
+    NameError: name 'print' is not defined
+
+
+Questions and Answers
+=====================
+
+Why is it not advised to use a future_statement above past_statements?
+----------------------------------------------------------------------
+
+Combining a future_statement and a past_statement in the same program, 
+or daisy-chaining, may allow for fixed, fine grained tracking of the temporal 
+path an exported statement takes, however it introduces a Time Traveler in 
+the Middle attack. While it is not explicitly disallowed, we do not advise 
+daisy-chaining into the past even for testing purposes.
+
+Doesn’t this violate the Conservation of Information?
+-----------------------------------------------------
+
+It turns out, conserving information is not actually a constraining function 
+on our universe as most information is not all that informative. This inequality, 
+when taking to it’s limit roughly means 1=0. 
+
+On this imbalance, it’s possible to export functions into the past violating 
+the conservation of information so long as the exported function is really all 
+that informative, even if it’s used in an informative fashion.
+
+Why can’t I export the Winning Team for the Philosophers Football match last weekend to my past program?
+--------------------------------------------------------------------------------------------------------
+
+While the universe doesn’t actually obey conservation of information, it obeys 
+the conservation of informative information. So long as the informativeness of 
+the information approaches an inequality of 1=0, exporting into the past is 
+possible. 
+
+Unfortunately winners of football matches mathematically qualify as informative 
+information and therefore cannot be handled using the 
+``to __past__ export past_statement``  syntax.
+
+
+Copyright
+=========
+
+This document has been placed in the public domain.
+
+
+..
+   Local Variables:
+   mode: indented-text
+   indent-tabs-mode: nil
+   sentence-end-double-space: t
+   fill-column: 70
+   coding: utf-8
+   End:
