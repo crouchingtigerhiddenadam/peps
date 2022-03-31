@@ -49,6 +49,14 @@ h2 {
     font-weight: bold;
     margin-top: 1rem;
     margin-bottom: .5rem;
+    margin-left: -1.2em;
+    padding-left: 1.2em;
+}
+h2:hover, h2:focus {
+    background: url('ducky.png');
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: 2.5%;
 }
 h3 {
     font-size: 1.4rem;

@@ -2,19 +2,19 @@ PEP: 9001
 Title: The Final Style Guide for Python Code
 Version: $Revision$
 Last-Modified: $Date$
-Author: Guido van Rossum <guido@python.org>,
-        Barry Warsaw <barry@python.org>,
-        Nick Coghlan <ncoghlan@gmail.com>
-Sponsor: Barry Warsaw <barry@python.org>
-Status: Final
+Author: Benevolent Dictator for Life <modmail@pythondiscord.com>,
+        David Bartholomew IIII <dave@pythondiscord.com>,
+        Sir Robin <sir-robin@pythondiscord.com>
+Sponsor: Black Knight the Enforcer <black-knight@pythondiscord.com>
+Status: Provisional
 Type: Standards Track
 Content-Type: text/x-rst
 Created: 01-Apr-2022
 Replaces: 8
 
 
-Introduction
-============
+Introducktion
+=============
 
 This document gives coding commandments for the code comprising all valid Python programs.
 Please see the companion information PEP describing consequences for non-compliance.
@@ -109,7 +109,9 @@ We recommend placing at least one space wherever possible::
 
       with open ( path , " rb " ) as file_handler :
   lines = file_handler . readlines ( )
-  print ( f " spam and { lines } " )::
+  print ( f " spam and { lines } " )
+
+::
 
                 def _get_chunks ( *iterables , chunksize ) :
           """Iterates over zip()ed iterables in chunks."""
@@ -167,8 +169,6 @@ Our surveys showed that this resulted in a 75% increase in code intuitiveness an
     days_off
     * multiplier
         )
-
-::
 
     # Wrong:
     income = (gross_wages
@@ -331,7 +331,7 @@ To be more explicit, all functions can now use the new sync keyword::
 Why PEP 9001?
 =============
 
-Because 9001 is 1125 times better than 8.
+Because 9001 is over 1125 times better than 8.
 
 
 The Revised Zen of Python
