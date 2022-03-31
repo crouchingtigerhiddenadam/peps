@@ -327,32 +327,38 @@ To be more explicit, all functions can now use the new sync keyword::
 
   hello_world = HelloWorldTextFactoryObject()
 
+
 Why PEP 9001?
 =============
 
 Because 9001 is 1125 times better than 8.
 
+
 The Revised Zen of Python
 =========================
-  Beautiful is better than ugly.
-  Explicit is better than implicit.
-  Simple is better than complex.
-  Complex is better than complicated.
-  Flat is better than nested.
-  Sparse is better than dense.
-  Readability is for hobgoblins.
-  Special cases will be met with the full force of the PSF.
-  Purity beats practicality.
-  There are no errors.
-  Anyone who says there are errors will be explicitly silenced.
-  In the face of ambiguity, remove the freedom to guess.
-  There is only one way to do it.
-  Although that way may not be obvious at first unless you're Dutch.
-  Now is better than never.
-  Although never is not real because time is fake.
-  If the implementation is hard to explain, it's a bad idea.
-  If the implementation is compliant with this style guide, it is a great idea.
-  Namespaces may contribute towards the 120 character minimum — let’s do more of those!
+
+.. code-block:: text
+
+    Beautiful is better than ugly.
+    Explicit is better than implicit.
+    Simple is better than complex.
+    Complex is better than complicated.
+    Flat is better than nested.
+    Sparse is better than dense.
+    Readability is for hobgoblins.
+    Special cases will be met with the full force of the PSF.
+    Purity beats practicality.
+    There are no errors.
+    Anyone who says there are errors will be explicitly   silenced.
+    In the face of ambiguity, remove the freedom to guess.
+    There is only one way to do it.
+    Although that way may not be obvious at first unless   you're Dutch.
+    Now is better than never.
+    Although never is not real because time is fake.
+    If the implementation is hard to explain, it's a bad   idea.
+    If the implementation is compliant with this style   guide, it is a great idea.
+    Namespaces may contribute towards the 120 character minimum — let’s do more of those!
+
 
 References
 ==========
