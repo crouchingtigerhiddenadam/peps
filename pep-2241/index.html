@@ -1,0 +1,279 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
+    <title>PEP 2241 – Back to the Past | peps.pythondiscord.com</title>
+    <link rel="shortcut icon" href="../_static/py.png"/>
+    <link rel="canonical" href="https://peps.pythondiscord.com/pep-2241.html" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/mq.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/dark.css" type="text/css" media="(prefers-color-scheme: dark)" id="css-dark"/>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" media="(prefers-color-scheme: light)" id="pyg" />
+    <link rel="stylesheet" href="../_static/pygments_dark.css" type="text/css" media="(prefers-color-scheme: dark)" id="pyg-dark" />
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <meta name="description" content="Python Enhancement Proposals (PEPs)"/>
+</head>
+<body>
+    <section id="pep-page-section">
+        <header>
+            <h1>Python Enhancement Proposals</h1>
+            <ul class="breadcrumbs">
+                <li><a href="https://www.python.org/" title="The Python Programming Language">Python</a> &raquo; </li>
+                <li><a href="../pep-0000/">PEP Index</a> &raquo; </li>
+                <li>PEP 2241 – Back to the Past</li>
+            </ul>
+            <button aria-label="Toggle dark mode" onClick="toggleColourScheme()"></button>
+        </header>
+        <article>
+            <section id="pep-content">
+<h1 class="page-title">PEP 2241 – Back to the Past</h1>
+<dl class="rfc2822 field-list simple">
+<dt class="field-odd">PEP</dt>
+<dd class="field-odd">2241</dd>
+<dt class="field-even">Title</dt>
+<dd class="field-even">Back to the Past</dd>
+<dt class="field-odd">Author</dt>
+<dd class="field-odd">Temporally Ambiguous</dd>
+<dt class="field-even">Status</dt>
+<dd class="field-even">April Fool!</dd>
+<dt class="field-odd">Type</dt>
+<dd class="field-odd">Standards Track</dd>
+<dt class="field-even">Created</dt>
+<dd class="field-even">01-Apr-2022</dd>
+</dl>
+<hr class="docutils" />
+<section id="contents">
+<details><summary>Contents</summary><ul class="simple">
+<li><a class="reference internal" href="#abstract">Abstract</a></li>
+<li><a class="reference internal" href="#motivation">Motivation</a></li>
+<li><a class="reference internal" href="#intent">Intent</a></li>
+<li><a class="reference internal" href="#implementation">Implementation</a><ul>
+<li><a class="reference internal" href="#hardware">Hardware</a></li>
+<li><a class="reference internal" href="#communication-protocol">Communication Protocol</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#syntax">Syntax</a></li>
+<li><a class="reference internal" href="#semantics">Semantics</a></li>
+<li><a class="reference internal" href="#example">Example</a></li>
+<li><a class="reference internal" href="#questions-and-answers">Questions and Answers</a><ul>
+<li><a class="reference internal" href="#why-is-it-not-advised-to-use-a-future-statement-above-past-statements">Why is it not advised to use a future_statement above past_statements?</a></li>
+<li><a class="reference internal" href="#doesnt-this-violate-the-conservation-of-information">Doesn’t this violate the Conservation of Information?</a></li>
+<li><a class="reference internal" href="#why-cant-i-export-the-winning-team-for-the-philosophers-football-match-last-weekend-to-my-past-program">Why can’t I export the Winning Team for the Philosophers Football match last weekend to my past program?</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#copyright">Copyright</a></li>
+</ul>
+</details></section>
+<section id="abstract">
+<h2><a class="toc-backref" href="#abstract">Abstract</a></h2>
+<p>Dating back to February of 2001, python has had the capacity to import
+from the <code class="docutils literal notranslate"><span class="pre">__future__</span></code>. Today we are announcing that the
+<code class="docutils literal notranslate"><span class="pre">to</span> <span class="pre">__past__</span> <span class="pre">export</span> <span class="pre">past_statement</span></code> companion syntax is now complete,
+allowing us to send the present and future syntax and semantic back to
+past programs.</p>
+</section>
+<section id="motivation">
+<h2><a class="toc-backref" href="#motivation">Motivation</a></h2>
+<p>There is no free lunch, and for every
+<code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">**__future__**</span> <span class="pre">import</span> <span class="pre">future_statement</span></code>, there must be a
+corresponding execution to export syntax or semantics back into the past.</p>
+</section>
+<section id="intent">
+<h2><a class="toc-backref" href="#intent">Intent</a></h2>
+<p>To allow the adoption of future syntax and semantics which are for a
+time incompatible with the current python version, it is possible to
+import them using a future_statement. Consequentially, there must be
+another program executed at an undetermined time in the future which
+removes that future_statement from the program, allowing the past
+program to import and use the future_statement.</p>
+<p>When a future_statement was needed some time in the past, a
+past_statement will be used to remove the syntax or semantics from
+code it is executing within.</p>
+</section>
+<section id="implementation">
+<h2><a class="toc-backref" href="#implementation">Implementation</a></h2>
+<p>the <code class="docutils literal notranslate"><span class="pre">__past__</span></code> and <code class="docutils literal notranslate"><span class="pre">__future__</span></code> syntax communicate in a transmitter-receiver
+design which does necessitate some hardware, as outlined below.</p>
+<section id="hardware">
+<h3><a class="toc-backref" href="#hardware">Hardware</a></h3>
+<p>Using the delta configuration of Emmett Brown’s technology we can transmit
+to the classical Wye configuration using a temporally focused delta-wye
+transformer. This is similar in principle to the turboencabulator, but
+here we must omit the lunar wave shaft for better signal integrity. The
+omission does come at the cost of the malleability in the logarithmic
+casing, but by offsetting the two halves of the transformer both
+temporally and physically, we maintain it’s logarithmic design, albeit
+significantly more rigid.</p>
+<p>Python core maintainers have preserved the wye configuration receiver
+which allows for the <code class="docutils literal notranslate"><span class="pre">__future__</span></code> syntax to function in the codebase.</p>
+</section>
+<section id="communication-protocol">
+<h3><a class="toc-backref" href="#communication-protocol">Communication Protocol</a></h3>
+<p>Reverse temporally focused bits, “Ni’s”, are structured into packets and
+transmitted to the wye receiver. To ensure successful packet negotiation,
+the communication protocol is 1001 tense formation compliant through
+“Future Semiconditionally Modified Subinverted Plagal Past Subjunctive
+Intentional”. While this does fall short of the full 1001 tense formation,
+the grammar is thorough enough to ensure reliable transmission assuming
+the delta transmitter is properly configured.</p>
+<p>In the event that it is accidentally configured as a Nutrimatic Drink
+Dispenser, it will throw an error code almost, but not quite, entirely
+unlike 418. This raises a <code class="docutils literal notranslate"><span class="pre">NutrimaticTeaError</span></code> which is blocking on infinite
+improbability drive architectures.</p>
+<p>The Wye receiver decodes and retransmits the packet to the corresponding
+<code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">__future__</span>&#160; <span class="pre">import</span> <span class="pre">future_statement</span></code> call.</p>
+</section>
+</section>
+<section id="syntax">
+<h2><a class="toc-backref" href="#syntax">Syntax</a></h2>
+<p>A past_statement is simply a to/export statement using the reserved
+module name <code class="docutils literal notranslate"><span class="pre">__past__</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">past_statement</span><span class="p">:</span> <span class="s2">&quot;to&quot;</span> <span class="s2">&quot;__past__&quot;</span> <span class="s2">&quot;export&quot;</span> <span class="n">feature</span> <span class="p">[</span><span class="s2">&quot;as&quot;</span> <span class="n">name</span><span class="p">]</span>
+                <span class="p">(</span><span class="s2">&quot;,&quot;</span><span class="n">feature</span> <span class="p">[</span><span class="s2">&quot;as&quot;</span> <span class="n">name</span><span class="p">])</span><span class="o">*</span>
+
+<span class="n">feature</span><span class="p">:</span> <span class="n">identifier</span>
+<span class="n">name</span><span class="p">:</span> <span class="n">identifier</span>
+</pre></div>
+</div>
+<p>In addition, all past_statements must appear at the top of the module.
+The only lines that can appear before a past_statement are:</p>
+<ul class="simple">
+<li>the module docstring (if any).</li>
+<li>Comments.</li>
+<li>Blank lines.</li>
+<li>Other past_statements</li>
+<li>Any future_statements (this is discouraged)</li>
+</ul>
+<p>Example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;This is a module docstring&quot;&quot;&quot;</span>
+
+<span class="c1"># This is a comment, preceded by a blank line and followed by</span>
+<span class="c1"># a past_statement</span>
+
+<span class="n">to</span> <span class="n">__past__</span> <span class="n">export</span> <span class="nb">print</span>
+
+<span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">sin</span>
+<span class="n">to</span> <span class="n">__past__</span> <span class="n">export</span> <span class="n">winning_philosophy_football_teams</span>
+<span class="c1"># Compile-time error!</span>
+<span class="c1"># That was an error because we cannot export profitable</span>
+<span class="c1"># knowledge back to the past</span>
+</pre></div>
+</div>
+</section>
+<section id="semantics">
+<h2><a class="toc-backref" href="#semantics">Semantics</a></h2>
+<p>A past_statement is recognized and treated specially at compile time:
+changes to the semantics of the core constructs are often implemented
+by generating different code with the past_statement removed.</p>
+<p>The direct runtime semantics are the reverse of any <code class="docutils literal notranslate"><span class="pre">import</span></code> statement:
+after the past_statement is invoked, it is treated as if there is no
+standard module containing it. Any further invocation to the
+past_statement will raise a SyntaxError.</p>
+</section>
+<section id="example">
+<h2><a class="toc-backref" href="#example">Example</a></h2>
+<p>Consider this code:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">42</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;x is&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>In recent versions of python, it prints <code class="docutils literal notranslate"><span class="pre">42</span></code> successfully. However if
+this is run using python 2.6, you’d need to run:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">print_function</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mi">42</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;x is&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Before the print As a Function can be executed.</p>
+<p>To sustain this usage, there must be a companion export:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">to</span> <span class="n">__past__</span> <span class="n">export</span> <span class="n">print_function</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mi">42</span>
+</pre></div>
+</div>
+<p>If the print function is called after it has been executed, the program will
+raise a NameError:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">to</span> <span class="n">__past__</span> <span class="n">export</span> <span class="n">print_function</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mi">42</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+<span class="ne">NameError</span><span class="p">:</span> <span class="n">name</span> <span class="s1">&#39;print&#39;</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">defined</span>
+</pre></div>
+</div>
+</section>
+<section id="questions-and-answers">
+<h2><a class="toc-backref" href="#questions-and-answers">Questions and Answers</a></h2>
+<section id="why-is-it-not-advised-to-use-a-future-statement-above-past-statements">
+<h3><a class="toc-backref" href="#why-is-it-not-advised-to-use-a-future-statement-above-past-statements">Why is it not advised to use a future_statement above past_statements?</a></h3>
+<p>Combining a future_statement and a past_statement in the same program,
+or daisy-chaining, may allow for fixed, fine grained tracking of the temporal
+path an exported statement takes, however it introduces a Time Traveler in
+the Middle attack. While it is not explicitly disallowed, we do not advise
+daisy-chaining into the past even for testing purposes.</p>
+</section>
+<section id="doesnt-this-violate-the-conservation-of-information">
+<h3><a class="toc-backref" href="#doesnt-this-violate-the-conservation-of-information">Doesn’t this violate the Conservation of Information?</a></h3>
+<p>It turns out, conserving information is not actually a constraining function
+on our universe as most information is not all that informative. This inequality,
+when taking to it’s limit roughly means 1=0.</p>
+<p>On this imbalance, it’s possible to export functions into the past violating
+the conservation of information so long as the exported function is really all
+that informative, even if it’s used in an informative fashion.</p>
+</section>
+<section id="why-cant-i-export-the-winning-team-for-the-philosophers-football-match-last-weekend-to-my-past-program">
+<h3><a class="toc-backref" href="#why-cant-i-export-the-winning-team-for-the-philosophers-football-match-last-weekend-to-my-past-program">Why can’t I export the Winning Team for the Philosophers Football match last weekend to my past program?</a></h3>
+<p>While the universe doesn’t actually obey conservation of information, it obeys
+the conservation of informative information. So long as the informativeness of
+the information approaches an inequality of 1=0, exporting into the past is
+possible.</p>
+<p>Unfortunately winners of football matches mathematically qualify as informative
+information and therefore cannot be handled using the
+<code class="docutils literal notranslate"><span class="pre">to</span> <span class="pre">__past__</span> <span class="pre">export</span> <span class="pre">past_statement</span></code>  syntax.</p>
+</section>
+</section>
+<section id="copyright">
+<h2><a class="toc-backref" href="#copyright">Copyright</a></h2>
+<p>This document has been placed in the public domain.</p>
+</section>
+</section>
+<hr class="docutils" />
+<p>Source: <a class="reference external" href="https://github.com/python-discord/peps/blob/main/pep-2241.rst">https://github.com/python-discord/peps/blob/main/pep-2241.rst</a></p>
+<p>Last modified: <a class="reference external" href="https://github.com/python-discord/peps/commits/main/pep-2241.rst">2022-03-31 22:43:01 GMT</a></p>
+
+        </article>
+        <nav id="pep-sidebar">
+            <h2>Contents</h2>
+            <p id="toc-title">PEP 2241 – Back to the Past</p>
+            <ul>
+<li><a class="reference internal" href="#abstract">Abstract</a></li>
+<li><a class="reference internal" href="#motivation">Motivation</a></li>
+<li><a class="reference internal" href="#intent">Intent</a></li>
+<li><a class="reference internal" href="#implementation">Implementation</a><ul>
+<li><a class="reference internal" href="#hardware">Hardware</a></li>
+<li><a class="reference internal" href="#communication-protocol">Communication Protocol</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#syntax">Syntax</a></li>
+<li><a class="reference internal" href="#semantics">Semantics</a></li>
+<li><a class="reference internal" href="#example">Example</a></li>
+<li><a class="reference internal" href="#questions-and-answers">Questions and Answers</a><ul>
+<li><a class="reference internal" href="#why-is-it-not-advised-to-use-a-future-statement-above-past-statements">Why is it not advised to use a future_statement above past_statements?</a></li>
+<li><a class="reference internal" href="#doesnt-this-violate-the-conservation-of-information">Doesn’t this violate the Conservation of Information?</a></li>
+<li><a class="reference internal" href="#why-cant-i-export-the-winning-team-for-the-philosophers-football-match-last-weekend-to-my-past-program">Why can’t I export the Winning Team for the Philosophers Football match last weekend to my past program?</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#copyright">Copyright</a></li>
+</ul>
+
+            <br />
+            <a id="source" href="https://github.com/python-discord/peps/blob/main/pep-2241.rst">Page Source (GitHub)</a>
+            <br />
+            <img src="../_static/ducky.png" width="20px">
+        </nav>
+    </section>
+    <script src="../_static/colour_scheme.js"></script>
+    <script src="../_static/wrap_tables.js"></script>
+</body>
+</html>
