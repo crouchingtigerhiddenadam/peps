@@ -63,6 +63,14 @@ h3 {
     font-weight: normal;
     margin-top: 1rem;
     margin-bottom: 0.5rem;
+    margin-left: -1.1em;
+    padding-left: 1.1em;
+}
+h3:hover, h3:focus {
+    background: url('ducky_regal.png');
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: 1.8%;
 }
 h4 {
     font-size: 1.2rem;
@@ -115,6 +123,12 @@ pre {
     font-size: 0.875rem;
     -webkit-hyphens: none;
     hyphens: none;
+}
+pre:hover, pre:focus {
+    background: url('ducky_australia.png');
+    background-repeat: no-repeat;
+    background-position: 99.5% 1%;
+    background-size: 2.2%;
 }
 code {
     overflow-wrap: break-word;
