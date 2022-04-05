@@ -13,8 +13,8 @@ Created: 01-Apr-2022
 Replaces: 8
 
 
-Introducktion
-=============
+Introduction
+============
 
 This document gives coding commandments for the code comprising all valid Python programs.
 Please see the companion information PEP describing consequences for non-compliance.
